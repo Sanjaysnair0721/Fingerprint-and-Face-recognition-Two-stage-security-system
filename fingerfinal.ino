@@ -110,7 +110,7 @@ int getFingerprintIDez() {
   digitalWrite(7,LOW);}
   else if (finger.fingerID ==2){
   digitalWrite(6,HIGH);
-  Serial.print(" Shyama H ");
+  Serial.print(" Your Name");
   delay(3000);
   digitalWrite(6,LOW);}
   return finger.fingerID; 
