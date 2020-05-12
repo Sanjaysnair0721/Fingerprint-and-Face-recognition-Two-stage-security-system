@@ -4,7 +4,7 @@ import numpy as np
 
 img=cv2.imread('2.png',0);
 img=cv2.imread('1.png',0);
-subjects = ["", "Sanjay S Nair", "Shyama H"]
+subjects = ["", "Sanjay S Nair", "Your Name"]
 def detect_face(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     face_cascade = cv2.CascadeClassifier('opencv-files/lbpcascade_frontalface.xml')
@@ -65,7 +65,7 @@ def draw_text(img, text, x, y):
     cv2.putText(img, text, (x, y), cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 255, 0), 2)
     if text =='Sanjay S Nair':
         img=cv2.imshow('1.png',0);
-    elif text =='Shyama H':
+    elif text =='Your Name':
         img=cv2.imshow('2.png',0);
     else:
         print("face not recognised")
