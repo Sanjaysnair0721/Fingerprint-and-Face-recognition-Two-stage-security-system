@@ -4,7 +4,6 @@ A simple two stage authentication system
 - Description
 - Components
 - Software
-- Connection
 - Implementation
 - Guidelines
 # Description
@@ -23,10 +22,6 @@ USB type connector
 - Python 3.7.2
 - Arduino IDE
 - OpenCV
-# Connection
-Connect Arduino and the Pi display to the Raspberry Pi(the first using USB 2.0 cable, and the second using HDMI to VGI cable).
-- Arduino to R307:
-
 # Implementation
 The fingerfinal.ino program is run in Arduino. When a finger is detected by the fingerprint sensor, it sends a confirmation signal to the Arduino board with a particular confidence value. This signal is accepted bythe code link.py .Once a finger is detected, and then the face_recognition.py program is run to detect the face of the person.Both face_recognition.py and link.py are stored inside Pi. The output will be displayed in the Pi display.
 
