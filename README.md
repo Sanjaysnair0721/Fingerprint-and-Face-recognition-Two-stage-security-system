@@ -26,7 +26,7 @@ USB type connector
 
 For connecting R307 to the Arduino, connect the Vcc and ground accordingly. Then, connect Tx of R307 to Rx of Arduino and Rx of R307 to Tx of Arduino.
 
-For connecting Arduino to Pi, use the   USB2.0 cable. Also, make 2 jumper wire connections between the Pi and Arduino(14 and 15 in Pi, 
+For connecting Arduino to Pi, use the   USB2.0 cable. Also, make 2 jumper wire connections between the Pi and Arduino(14 and 15 in Pi, 6 and 7 in Arduino) 
 - Code
 
 The fingerfinal.ino program is run in Arduino. When a finger is detected by the fingerprint sensor, it sends a confirmation signal to the Arduino board with a particular confidence value. This signal is accepted bythe code link.py .Once a finger is detected, and then the face_recognition.py program is run to detect the face of the person.Both face_recognition.py and link.py are stored inside Pi. The output will be displayed in the Pi display.
