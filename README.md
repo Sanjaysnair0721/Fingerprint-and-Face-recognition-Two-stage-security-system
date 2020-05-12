@@ -5,6 +5,7 @@ A simple two stage authentication system
 - Components
 - Software
 - Connection
+- Implementation
 - Guidelines
 # Description
 The project is similiar to the multi stage verification tech used in big companies, government for security. It consists of a fingerprint scanning, followed by a face recognition system to provide double security. The face recognition is initiated only if the finger print scan scores a match in its database. Once a match is hit, face recognition is enabled. If both the stages gets a match, access is granted. We will be dealing with the 2 stages here.
@@ -23,3 +24,8 @@ USB type connector
 - Arduino IDE
 - OpenCV
 # Connection
+Connect Arduino and the Pi display to the Raspberry Pi(the first using USB 2.0 cable, and the second using HDMI to VGI cable).
+- Arduino to R307:
+
+# Implementation
+The fingerfinal.ino program is run in Arduino. When a finger is detected by the fingerprint sensor, it sends a confirmation signal to the Arduino board with a particular confidence value. This signal is accepted bythe code link.py .Once a finger is detected, and then the face_recognition.py program is run to detect the face of the person.Both face_recognition.py and link.py are stored inside Pi. The output will be displayed in the Pi display.All codes are witte for 2 people ie. my face and fingerprint will be recognised. Replace all "Your Name" phrases with your name in the code. Inside the 'training-data' folder, load 10 of your different images and save it in a folder 's2'. Also, store one image  inside 'test-data' folder as 'test1'. 
