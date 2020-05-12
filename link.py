@@ -10,7 +10,7 @@ if GPIO.input(14):
     print("Proceed to face verification");
     face_recognition(a,b);
 elif GPIO.input(15):
-    print("Finger detected - Elvis Presley");
+    print("Finger detected - Your Name");
     print("Proceed to face verification");
     face_recognition(a,b);
 else
